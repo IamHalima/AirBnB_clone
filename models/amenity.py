@@ -1,12 +1,9 @@
 #!/usr/bin/python3
-'''
-    Implementation of the Amenity class
-'''
+"""Module for Amenity class."""
+
 from models.base_model import BaseModel
 
 
 class Amenity(BaseModel):
-    '''
-        Implementation for the Amenities.
-    '''
+    """Class representing a Amenity."""
     name = ""

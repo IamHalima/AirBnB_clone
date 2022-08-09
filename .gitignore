@@ -1,2 +1,5 @@
-__pycache__
+*-main.py
+__pycache__/
 *.pyc
+*.swp
+file.json
