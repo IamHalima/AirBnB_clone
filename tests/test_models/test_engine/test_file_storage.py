@@ -90,7 +90,7 @@ class testFileStorage(unittest.TestCase):
 
         self.assertIsInstance(content, str)
 
-    def test_reaload_without_file(self):
+    def test_reload_without_file(self):
         '''
             Tests that nothing happens when file.json does not exists
             and reload is called
