@@ -1,15 +1,14 @@
 #!/usr/bin/python3
-"""Module for Place class."""
-
-from models.base_model import BaseModel
+""" Places where host the user's """
+from . base_model import BaseModel
 
 
 class Place(BaseModel):
-    """Class representing a Place."""
-    city_id = ""
-    user_id = ""
-    name = ""
-    description = ""
+    """ Places where we offer our services """
+    city_id = ''
+    user_id = ''
+    name = ''
+    description = ''
     number_rooms = 0
     number_bathrooms = 0
     max_guest = 0
