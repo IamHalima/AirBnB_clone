@@ -6,7 +6,6 @@
 
 <<<<<<< HEAD
     def setUp(self):
-<<<<<<< HEAD
         """initializes new city for testing"""
         self.city = City()
 
@@ -72,6 +71,7 @@
 
 if __name__ == '__main__':
     unittest.main
+<<<<<<< HEAD
 =======
         """Sets up test methods."""
         pass
@@ -145,3 +145,5 @@ class TestUser(unittest.TestCase):
         name = getattr(new_city, "state_id")
         self.assertIsInstance(name, str)
 >>>>>>> parent of 492c7bb... initial checks
+=======
+>>>>>>> parent of 647751d... initial checks

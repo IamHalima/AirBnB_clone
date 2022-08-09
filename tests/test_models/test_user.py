@@ -6,7 +6,6 @@
 
 <<<<<<< HEAD
     def setUp(self):
-<<<<<<< HEAD
         """initializes new user for testing"""
         self.user = User()
 
@@ -72,6 +71,7 @@
 
 if __name__ == '__main__':
     unittest.main
+<<<<<<< HEAD
 =======
         """Sets up test methods."""
         pass
@@ -170,3 +170,5 @@ class TestUser(unittest.TestCase):
         name = getattr(new, "password")
         self.assertIsInstance(name, str)
 >>>>>>> parent of 492c7bb... initial checks
+=======
+>>>>>>> parent of 647751d... initial checks

@@ -6,7 +6,6 @@
 
 <<<<<<< HEAD
     def setUp(self):
-<<<<<<< HEAD
         """initializes new amenity for testing"""
         self.amenity = Amenity()
 
@@ -71,6 +70,7 @@
 
 if __name__ == '__main__':
     unittest.main
+<<<<<<< HEAD
 =======
         """Sets up test methods."""
         pass
@@ -138,3 +138,5 @@ class TestAmenity(unittest.TestCase):
         name_value = getattr(new_amenity, "name")
         self.assertIsInstance(name_value, str)
 >>>>>>> parent of 492c7bb... initial checks
+=======
+>>>>>>> parent of 647751d... initial checks

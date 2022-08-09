@@ -1,6 +1,9 @@
 #!/usr/bin/python3
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> parent of 647751d... initial checks
 """
 Amenity Class from Models Module
 """
@@ -22,6 +25,7 @@ class Amenity(BaseModel):
     def __init__(self, *args, **kwargs):
         """instantiates a new amenity"""
         super().__init__(self, *args, **kwargs)
+<<<<<<< HEAD
 =======
 """ The amenities of place """
 from . base_model import BaseModel
@@ -34,3 +38,5 @@ class Amenity(BaseModel):
 =======
     name = ""
 >>>>>>> parent of 492c7bb... initial checks
+=======
+>>>>>>> parent of 647751d... initial checks

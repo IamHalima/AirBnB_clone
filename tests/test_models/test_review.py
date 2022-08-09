@@ -6,7 +6,6 @@
 
 <<<<<<< HEAD
     def setUp(self):
-<<<<<<< HEAD
         """initializes new review for testing"""
         self.review = Review()
 
@@ -71,6 +70,7 @@
 
 if __name__ == '__main__':
     unittest.main
+<<<<<<< HEAD
 =======
         """Sets up test methods."""
         pass
@@ -146,3 +146,5 @@ class TestReview(unittest.TestCase):
         self.assertIsInstance(user_id, str)
         self.assertIsInstance(text, str)
 >>>>>>> parent of 492c7bb... initial checks
+=======
+>>>>>>> parent of 647751d... initial checks

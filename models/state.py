@@ -1,6 +1,9 @@
 #!/usr/bin/python3
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> parent of 647751d... initial checks
 """
 State Class from Models Module
 """
@@ -22,6 +25,7 @@ class State(BaseModel):
     def __init__(self, *args, **kwargs):
         """instantiates a new state"""
         super().__init__(self, *args, **kwargs)
+<<<<<<< HEAD
 =======
 """ State where user's come from """
 from . base_model import BaseModel
@@ -34,3 +38,5 @@ class State(BaseModel):
 =======
     name = ""
 >>>>>>> parent of 492c7bb... initial checks
+=======
+>>>>>>> parent of 647751d... initial checks

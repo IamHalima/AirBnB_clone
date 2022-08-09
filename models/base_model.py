@@ -1,6 +1,9 @@
 #!/usr/bin/python3
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> parent of 647751d... initial checks
 """
 BaseModel Class of Models Module
 """
@@ -8,6 +11,7 @@ BaseModel Class of Models Module
 import json
 import models
 from uuid import uuid4, UUID
+<<<<<<< HEAD
 =======
 
 
@@ -19,14 +23,17 @@ import uuid
 import models
 from uuid import uuid4
 >>>>>>> parent of 492c7bb... initial checks
+=======
+>>>>>>> parent of 647751d... initial checks
 from datetime import datetime
-# import the variable storage
-import models
 
 
 class BaseModel:
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> parent of 647751d... initial checks
     """attributes and functions for BaseModel class"""
 =======
     """Represents the BaseModel of the HBnB project."""
@@ -74,6 +81,7 @@ class BaseModel:
         """returns string type representation of object instance"""
         cname = type(self).__name__
         return "[{}] ({}) {}".format(cname, self.id, self.__dict__)
+<<<<<<< HEAD
 =======
     """ class for all other classes to inherit from """
     def __init__(self, *args, **kwargs):
@@ -140,3 +148,5 @@ class BaseModel:
         clname = self.__class__.__name__
         return "[{}] ({}) {}".format(clname, self.id, self.__dict__)
 >>>>>>> parent of 492c7bb... initial checks
+=======
+>>>>>>> parent of 647751d... initial checks
