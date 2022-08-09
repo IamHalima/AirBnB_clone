@@ -1,15 +1,17 @@
 #!/usr/bin/python3
-"""Defines the City class."""
+"""
+City Class from Models Module
+"""
+
 from models.base_model import BaseModel
 
 
 class City(BaseModel):
-    """Represent a city.
+    """City class handles all application cities"""
 
-    Attributes:
-        state_id (str): The state id.
-        name (str): The name of the city.
-    """
+    state_id = ''
+    name = ''
 
-    state_id = ""
-    name = ""
+    def __init__(self, *args, **kwargs):
+        """instantiates a new city"""
+        super().__init__(self, *args, **kwargs)
