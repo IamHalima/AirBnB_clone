@@ -1,5 +1,6 @@
 #!/usr/bin/python3
 <<<<<<< HEAD
+<<<<<<< HEAD
 """
 BaseModel Class of Models Module
 """
@@ -13,68 +14,63 @@ from uuid import uuid4, UUID
 """ Base module """
 import uuid
 >>>>>>> parent of 6bc3c0a... initial checks
+=======
+"""Defines the BaseModel class."""
+import models
+from uuid import uuid4
+>>>>>>> parent of 492c7bb... initial checks
 from datetime import datetime
 # import the variable storage
 import models
 
-now = datetime.now
-strptime = datetime.strptime
-
 
 class BaseModel:
 <<<<<<< HEAD
+<<<<<<< HEAD
     """attributes and functions for BaseModel class"""
+=======
+    """Represents the BaseModel of the HBnB project."""
+>>>>>>> parent of 492c7bb... initial checks
 
     def __init__(self, *args, **kwargs):
-        """instantiation of new BaseModel Class"""
-        if kwargs:
-            self.__set_attributes(kwargs)
+        """Initialize a new BaseModel.
+
+        Args:
+            *args (any): Unused.
+            **kwargs (dict): Key/value pairs of attributes.
+        """
+        tform = "%Y-%m-%dT%H:%M:%S.%f"
+        self.id = str(uuid4())
+        self.created_at = datetime.today()
+        self.updated_at = datetime.today()
+        if len(kwargs) != 0:
+            for k, v in kwargs.items():
+                if k == "created_at" or k == "updated_at":
+                    self.__dict__[k] = datetime.strptime(v, tform)
+                else:
+                    self.__dict__[k] = v
         else:
-            self.id = str(uuid4())
-            self.created_at = now()
             models.storage.new(self)
 
-    def __set_attributes(self, d):
-        """converts kwargs values to python class attributes"""
-        if not isinstance(d['created_at'], datetime):
-            d['created_at'] = strptime(d['created_at'], "%Y-%m-%d %H:%M:%S.%f")
-        if 'updated_at' in d:
-            if not isinstance(d['updated_at'], datetime):
-                d['updated_at'] = strptime(d['updated_at'],
-                                           "%Y-%m-%d %H:%M:%S.%f")
-        if d['__class__']:
-            d.pop('__class__')
-        self.__dict__ = d
-
-    def __is_serializable(self, obj_v):
-        """checks if object is serializable"""
-        try:
-            nada = json.dumps(obj_v)
-            return True
-        except Exception:
-            return False
-
-    def bm_update(self, name, value):
-        setattr(self, name, value)
-        self.save()
-
     def save(self):
-        """updates attribute updated_at to current time"""
-        self.updated_at = now()
+        """Update updated_at with the current datetime."""
+        self.updated_at = datetime.today()
         models.storage.save()
 
-    def to_json(self):
-        """returns json representation of self"""
-        bm_dict = {}
-        for k, v in (self.__dict__).items():
-            if (self.__is_serializable(v)):
-                bm_dict[k] = v
-            else:
-                bm_dict[k] = str(v)
-        bm_dict["__class__"] = type(self).__name__
-        return(bm_dict)
+    def to_dict(self):
+        """Return the dictionary of the BaseModel instance.
+
+        Includes the key/value pair __class__ representing
+        the class name of the object.
+        """
+        rdict = self.__dict__.copy()
+        rdict["created_at"] = self.created_at.isoformat()
+        rdict["updated_at"] = self.updated_at.isoformat()
+        rdict["__class__"] = self.__class__.__name__
+        return rdict
 
     def __str__(self):
+<<<<<<< HEAD
         """returns string type representation of object instance"""
         cname = type(self).__name__
         return "[{}] ({}) {}".format(cname, self.id, self.__dict__)
@@ -139,3 +135,8 @@ class BaseModel:
                 tdic[n] = i
         return (tdic)
 >>>>>>> parent of 6bc3c0a... initial checks
+=======
+        """Return the print/str representation of the BaseModel instance."""
+        clname = self.__class__.__name__
+        return "[{}] ({}) {}".format(clname, self.id, self.__dict__)
+>>>>>>> parent of 492c7bb... initial checks

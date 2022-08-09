@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 from models.engine import file_storage
 from models.base_model import BaseModel
 from models.amenity import Amenity
@@ -17,5 +18,12 @@ from models.engine.file_storage import FileStorage
 
 storage = FileStorage()
 >>>>>>> parent of 6bc3c0a... initial checks
+=======
+#!/usr/bin/python3
+"""__init__ magic method for models directory"""
+from models.engine.file_storage import FileStorage
+
+
+storage = FileStorage()
+>>>>>>> parent of 492c7bb... initial checks
 storage.reload()
-CNC = file_storage.FileStorage.CNC

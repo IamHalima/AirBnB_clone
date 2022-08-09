@@ -1,55 +1,10 @@
 #!/usr/bin/python3
-"""
-Unit Test for City Class
-"""
-import unittest
-from datetime import datetime
-import models
-import json
 
-City = models.city.City
-BaseModel = models.base_model.BaseModel
+'''
+    All the test for the user model are implemented here.
+'''
 
-
-class TestCityDocs(unittest.TestCase):
-    """Class for testing BaseModel docs"""
-
-    @classmethod
-    def setUpClass(cls):
-        print('\n\n.................................')
-        print('..... Testing Documentation .....')
-        print('........   City Class   ........')
-        print('.................................\n\n')
-
-    def test_doc_file(self):
-        """... documentation for the file"""
-        expected = '\nCity Class from Models Module\n'
-        actual = models.city.__doc__
-        self.assertEqual(expected, actual)
-
-    def test_doc_class(self):
-        """... documentation for the class"""
-        expected = 'City class handles all application cities'
-        actual = City.__doc__
-        self.assertEqual(expected, actual)
-
-    def test_doc_init(self):
-        """... documentation for init function"""
-        expected = 'instantiates a new city'
-        actual = City.__init__.__doc__
-        self.assertEqual(expected, actual)
-
-
-class TestCityInstances(unittest.TestCase):
-    """testing for class instances"""
-
-    @classmethod
-    def setUpClass(cls):
-        print('\n\n.................................')
-        print('....... Testing Functions .......')
-        print('.........  City Class  .........')
-        print('.................................\n\n')
-
+<<<<<<< HEAD
     def setUp(self):
 <<<<<<< HEAD
         """initializes new city for testing"""
@@ -151,3 +106,42 @@ if __name__ == '__main__':
 if __name__ == "__main__":
     unittest.main()
 >>>>>>> parent of 73da16d... initial checks
+=======
+import unittest
+from models.base_model import BaseModel
+from models.city import City
+
+
+class TestUser(unittest.TestCase):
+    '''
+        Testing User class
+    '''
+
+    def test_City_inheritance(self):
+        '''
+            tests that the City class Inherits from BaseModel
+        '''
+        new_city = City()
+        self.assertIsInstance(new_city, BaseModel)
+
+    def test_User_attributes(self):
+        new_city = City()
+        self.assertTrue("state_id" in new_city.__dir__())
+        self.assertTrue("name" in new_city.__dir__())
+
+    def test_type_name(self):
+        '''
+            Test the type of name
+        '''
+        new_city = City()
+        name = getattr(new_city, "name")
+        self.assertIsInstance(name, str)
+
+    def test_type_name(self):
+        '''
+            Test the type of name
+        '''
+        new_city = City()
+        name = getattr(new_city, "state_id")
+        self.assertIsInstance(name, str)
+>>>>>>> parent of 492c7bb... initial checks

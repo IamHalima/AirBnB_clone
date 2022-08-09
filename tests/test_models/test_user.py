@@ -1,55 +1,10 @@
 #!/usr/bin/python3
-"""
-Unit Test for User Class
-"""
-import unittest
-from datetime import datetime
-import models
-import json
 
-User = models.user.User
-BaseModel = models.base_model.BaseModel
+'''
+    All the test for the user model are implemented here.
+'''
 
-
-class TestUserDocs(unittest.TestCase):
-    """Class for testing User Class docs"""
-
-    @classmethod
-    def setUpClass(cls):
-        print('\n\n.................................')
-        print('..... Testing Documentation .....')
-        print('........   User  Class   ........')
-        print('.................................\n\n')
-
-    def test_doc_file(self):
-        """... documentation for the file"""
-        expected = '\nUser Class from Models Module\n'
-        actual = models.user.__doc__
-        self.assertEqual(expected, actual)
-
-    def test_doc_class(self):
-        """... documentation for the class"""
-        expected = 'User class handles all application users'
-        actual = User.__doc__
-        self.assertEqual(expected, actual)
-
-    def test_doc_init(self):
-        """... documentation for init function"""
-        expected = 'instantiates a new user'
-        actual = User.__init__.__doc__
-        self.assertEqual(expected, actual)
-
-
-class TestUserInstances(unittest.TestCase):
-    """testing for class instances"""
-
-    @classmethod
-    def setUpClass(cls):
-        print('\n\n.................................')
-        print('....... Testing Functions .......')
-        print('.........  User  Class  .........')
-        print('.................................\n\n')
-
+<<<<<<< HEAD
     def setUp(self):
 <<<<<<< HEAD
         """initializes new user for testing"""
@@ -151,3 +106,67 @@ if __name__ == '__main__':
 if __name__ == "__main__":
     unittest.main()
 >>>>>>> parent of 73da16d... initial checks
+=======
+import unittest
+from models.base_model import BaseModel
+from models.user import User
+from io import StringIO
+import sys
+import datetime
+
+
+class TestUser(unittest.TestCase):
+    '''
+        Testing User class
+    '''
+
+    def test_User_inheritance(self):
+        '''
+            tests that the User class Inherits from BaseModel
+        '''
+        new_user = User()
+        self.assertIsInstance(new_user, BaseModel)
+
+    def test_User_attributes(self):
+        '''
+            Test the user attributes exist
+        '''
+
+        new_user = User()
+        self.assertTrue("email" in new_user.__dir__())
+        self.assertTrue("first_name" in new_user.__dir__())
+        self.assertTrue("last_name" in new_user.__dir__())
+        self.assertTrue("password" in new_user.__dir__())
+
+    def test_type_email(self):
+        '''
+            Test the type of name
+        '''
+        new = User()
+        name = getattr(new, "email")
+        self.assertIsInstance(name, str)
+
+    def test_type_first_name(self):
+        '''
+            Test the type of name
+        '''
+        new = User()
+        name = getattr(new, "first_name")
+        self.assertIsInstance(name, str)
+
+    def test_type_last_name(self):
+        '''
+            Test the type of last_name
+        '''
+        new = User()
+        name = getattr(new, "last_name")
+        self.assertIsInstance(name, str)
+
+    def test_type_password(self):
+        '''
+            Test the type of password
+        '''
+        new = User()
+        name = getattr(new, "password")
+        self.assertIsInstance(name, str)
+>>>>>>> parent of 492c7bb... initial checks

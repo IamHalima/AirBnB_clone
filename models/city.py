@@ -1,18 +1,18 @@
 <<<<<<< HEAD
 #!/usr/bin/python3
-"""
-City Class from Models Module
-"""
-
+"""Defines the City class."""
 from models.base_model import BaseModel
 
 
 class City(BaseModel):
-    """City class handles all application cities"""
+    """Represent a city.
 
-    state_id = ''
-    name = ''
+    Attributes:
+        state_id (str): The state id.
+        name (str): The name of the city.
+    """
 
+<<<<<<< HEAD
     def __init__(self, *args, **kwargs):
         """instantiates a new city"""
         super().__init__(self, *args, **kwargs)
@@ -27,3 +27,7 @@ class City(BaseModel):
     state_id = ''
     name = ''
 >>>>>>> parent of 6bc3c0a... initial checks
+=======
+    state_id = ""
+    name = ""
+>>>>>>> parent of 492c7bb... initial checks

@@ -1,55 +1,10 @@
 #!/usr/bin/python3
-"""
-Unit Test for Amenity Class
-"""
-import unittest
-from datetime import datetime
-import models
-import json
 
-Amenity = models.amenity.Amenity
-BaseModel = models.base_model.BaseModel
+'''
+    All the test for the amenity model are implemented here.
+'''
 
-
-class TestAmenityDocs(unittest.TestCase):
-    """Class for testing BaseModel docs"""
-
-    @classmethod
-    def setUpClass(cls):
-        print('\n\n.................................')
-        print('..... Testing Documentation .....')
-        print('........   Amenity  Class   ........')
-        print('.................................\n\n')
-
-    def test_doc_file(self):
-        """... documentation for the file"""
-        expected = '\nAmenity Class from Models Module\n'
-        actual = models.amenity.__doc__
-        self.assertEqual(expected, actual)
-
-    def test_doc_class(self):
-        """... documentation for the class"""
-        expected = 'Amenity class handles all application amenities'
-        actual = Amenity.__doc__
-        self.assertEqual(expected, actual)
-
-    def test_doc_init(self):
-        """... documentation for init function"""
-        expected = 'instantiates a new amenity'
-        actual = Amenity.__init__.__doc__
-        self.assertEqual(expected, actual)
-
-
-class TestAmenityInstances(unittest.TestCase):
-    """testing for class instances"""
-
-    @classmethod
-    def setUpClass(cls):
-        print('\n\n.................................')
-        print('....... Testing Functions .......')
-        print('.........  Amenity  Class  .........')
-        print('.................................\n\n')
-
+<<<<<<< HEAD
     def setUp(self):
 <<<<<<< HEAD
         """initializes new amenity for testing"""
@@ -150,3 +105,36 @@ if __name__ == '__main__':
 if __name__ == "__main__":
     unittest.main()
 >>>>>>> parent of 73da16d... initial checks
+=======
+import unittest
+from models.base_model import BaseModel
+from models.amenity import Amenity
+
+
+class TestAmenity(unittest.TestCase):
+    '''
+        Testing Amenity class
+    '''
+
+    def test_Amenity_inheritence(self):
+        '''
+            tests that the Amenity class Inherits from BaseModel
+        '''
+        new_amenity = Amenity()
+        self.assertIsInstance(new_amenity, BaseModel)
+
+    def test_Amenity_attributes(self):
+        '''
+            Test that Amenity class had name attribute.
+        '''
+        new_amenity = Amenity()
+        self.assertTrue("name" in new_amenity.__dir__())
+
+    def test_Amenity_attribute_type(self):
+        '''
+            Test that Amenity class had name attribute's type.
+        '''
+        new_amenity = Amenity()
+        name_value = getattr(new_amenity, "name")
+        self.assertIsInstance(name_value, str)
+>>>>>>> parent of 492c7bb... initial checks

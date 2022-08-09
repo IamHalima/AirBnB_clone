@@ -1,55 +1,10 @@
 #!/usr/bin/python3
-"""
-Unit Test for Review Class
-"""
-import unittest
-from datetime import datetime
-import models
-import json
 
-Review = models.review.Review
-BaseModel = models.base_model.BaseModel
+'''
+    All the test for the user model are implemented here.
+'''
 
-
-class TestReviewDocs(unittest.TestCase):
-    """Class for testing BaseModel docs"""
-
-    @classmethod
-    def setUpClass(cls):
-        print('\n\n.................................')
-        print('..... Testing Documentation .....')
-        print('.......   Review  Class   .......')
-        print('.................................\n\n')
-
-    def test_doc_file(self):
-        """... documentation for the file"""
-        expected = '\nReview Class from Models Module\n'
-        actual = models.review.__doc__
-        self.assertEqual(expected, actual)
-
-    def test_doc_class(self):
-        """... documentation for the class"""
-        expected = 'Review class handles all application reviews'
-        actual = Review.__doc__
-        self.assertEqual(expected, actual)
-
-    def test_doc_init(self):
-        """... documentation for init function"""
-        expected = 'instantiates a new review'
-        actual = Review.__init__.__doc__
-        self.assertEqual(expected, actual)
-
-
-class TestReviewInstances(unittest.TestCase):
-    """testing for class instances"""
-
-    @classmethod
-    def setUpClass(cls):
-        print('\n\n.................................')
-        print('....... Testing Functions .......')
-        print('........  Review  Class  ........')
-        print('.................................\n\n')
-
+<<<<<<< HEAD
     def setUp(self):
 <<<<<<< HEAD
         """initializes new review for testing"""
@@ -150,3 +105,44 @@ if __name__ == '__main__':
 if __name__ == "__main__":
     unittest.main()
 >>>>>>> parent of 73da16d... initial checks
+=======
+import unittest
+from models.base_model import BaseModel
+from models.review import Review
+
+
+class TestReview(unittest.TestCase):
+    '''
+        Testing Review class
+    '''
+
+    def test_Review_inheritance(self):
+        '''
+            tests that the Review class Inherits from BaseModel
+        '''
+        new_review = Review()
+        self.assertIsInstance(new_review, BaseModel)
+
+    def test_Review_attributes(self):
+        '''
+            Test that Review class has place_id, user_id and text
+            attributes.
+        '''
+        new_review = Review()
+        self.assertTrue("place_id" in new_review.__dir__())
+        self.assertTrue("user_id" in new_review.__dir__())
+        self.assertTrue("text" in new_review.__dir__())
+
+    def test_Review_attributes(self):
+        '''
+            Test that Review class has place_id, user_id and text
+            attributes.
+        '''
+        new_review = Review()
+        place_id = getattr(new_review, "place_id")
+        user_id = getattr(new_review, "user_id")
+        text = getattr(new_review, "text")
+        self.assertIsInstance(place_id, str)
+        self.assertIsInstance(user_id, str)
+        self.assertIsInstance(text, str)
+>>>>>>> parent of 492c7bb... initial checks

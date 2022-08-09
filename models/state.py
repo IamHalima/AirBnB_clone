@@ -1,17 +1,24 @@
 #!/usr/bin/python3
 <<<<<<< HEAD
+<<<<<<< HEAD
 """
 State Class from Models Module
 """
 
+=======
+"""Defines the State class."""
+>>>>>>> parent of 492c7bb... initial checks
 from models.base_model import BaseModel
 
 
 class State(BaseModel):
-    """State class handles all application states"""
+    """Represent a state.
 
-    name = ''
+    Attributes:
+        name (str): The name of the state.
+    """
 
+<<<<<<< HEAD
     def __init__(self, *args, **kwargs):
         """instantiates a new state"""
         super().__init__(self, *args, **kwargs)
@@ -24,3 +31,6 @@ class State(BaseModel):
     """ Define the state of the user """
     name = ''
 >>>>>>> parent of 6bc3c0a... initial checks
+=======
+    name = ""
+>>>>>>> parent of 492c7bb... initial checks
