@@ -5,6 +5,20 @@
 '''
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+class TestAmenityInstances(unittest.TestCase):
+    """testing for class instances"""
+
+    @classmethod
+    def setUpClass(cls):
+        print('\n\n.................................')
+        print('....... Testing Functions .......')
+        print('.........  Amenity  Class  .........')
+        print('.................................\n\n')
+
+>>>>>>> parent of 647751d... initial checks
     def setUp(self):
         """initializes new amenity for testing"""
         self.amenity = Amenity()
@@ -70,6 +84,7 @@
 
 if __name__ == '__main__':
     unittest.main
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
         """Sets up test methods."""
@@ -138,5 +153,7 @@ class TestAmenity(unittest.TestCase):
         name_value = getattr(new_amenity, "name")
         self.assertIsInstance(name_value, str)
 >>>>>>> parent of 492c7bb... initial checks
+=======
+>>>>>>> parent of 647751d... initial checks
 =======
 >>>>>>> parent of 647751d... initial checks

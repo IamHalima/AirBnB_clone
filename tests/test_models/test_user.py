@@ -5,6 +5,20 @@
 '''
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+class TestUserInstances(unittest.TestCase):
+    """testing for class instances"""
+
+    @classmethod
+    def setUpClass(cls):
+        print('\n\n.................................')
+        print('....... Testing Functions .......')
+        print('.........  User  Class  .........')
+        print('.................................\n\n')
+
+>>>>>>> parent of 647751d... initial checks
     def setUp(self):
         """initializes new user for testing"""
         self.user = User()
@@ -71,6 +85,7 @@
 
 if __name__ == '__main__':
     unittest.main
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
         """Sets up test methods."""
@@ -170,5 +185,7 @@ class TestUser(unittest.TestCase):
         name = getattr(new, "password")
         self.assertIsInstance(name, str)
 >>>>>>> parent of 492c7bb... initial checks
+=======
+>>>>>>> parent of 647751d... initial checks
 =======
 >>>>>>> parent of 647751d... initial checks

@@ -16,6 +16,7 @@ class City(BaseModel):
         """instantiates a new city"""
         super().__init__(self, *args, **kwargs)
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 #!/user/bin/python3
 """ City where user's come from """
@@ -31,5 +32,7 @@ class City(BaseModel):
     state_id = ""
     name = ""
 >>>>>>> parent of 492c7bb... initial checks
+=======
+>>>>>>> parent of 647751d... initial checks
 =======
 >>>>>>> parent of 647751d... initial checks

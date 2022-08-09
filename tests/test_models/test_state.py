@@ -117,6 +117,7 @@ class TestStateInstances(unittest.TestCase):
 if __name__ == '__main__':
     unittest.main
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
         """Sets up test methods."""
         pass
@@ -183,5 +184,7 @@ class TestState(unittest.TestCase):
         name = getattr(new_state, "name")
         self.assertIsInstance(name, str)
 >>>>>>> parent of 492c7bb... initial checks
+=======
+>>>>>>> parent of 647751d... initial checks
 =======
 >>>>>>> parent of 647751d... initial checks

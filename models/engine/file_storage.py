@@ -2,6 +2,9 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> parent of 647751d... initial checks
 =======
 >>>>>>> parent of 647751d... initial checks
 """
@@ -10,6 +13,7 @@ Handles I/O, writing and reading, of JSON for storage of all class instances
 import json
 from models import base_model, amenity, city, place, review, state, user
 from datetime import datetime
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -30,6 +34,8 @@ from models.amenity import Amenity
 from models.place import Place
 from models.review import Review
 >>>>>>> parent of 6bc3c0a... initial checks
+=======
+>>>>>>> parent of 647751d... initial checks
 =======
 >>>>>>> parent of 647751d... initial checks
 
@@ -56,6 +62,7 @@ class FileStorage:
     }
     __file_path = './dev/file.json'
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 class FileStorage:
     """ serializes instances to a JSON file and deserializes
@@ -80,6 +87,11 @@ class FileStorage:
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
+>>>>>>> parent of 647751d... initial checks
+=======
+    __objects = {}
+
+    def all(self):
 >>>>>>> parent of 647751d... initial checks
         """returns private attribute: __objects"""
 =======
@@ -114,6 +126,7 @@ class FileStorage:
         for o_id, d in new_objs.items():
             k_cls = d['__class__']
             FileStorage.__objects[o_id] = FileStorage.CNC[k_cls](**d)
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
         """ returns the dictionary __objects """
@@ -153,5 +166,7 @@ class FileStorage:
 >>>>>>> parent of 6bc3c0a... initial checks
 =======
 >>>>>>> parent of 492c7bb... initial checks
+=======
+>>>>>>> parent of 647751d... initial checks
 =======
 >>>>>>> parent of 647751d... initial checks

@@ -2,6 +2,9 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> parent of 647751d... initial checks
 =======
 >>>>>>> parent of 647751d... initial checks
 """
@@ -28,6 +31,7 @@ class Review(BaseModel):
         """instantiates a new review"""
         super().__init__(self, *args, **kwargs)
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 """ review of user's when left the place """
 from . base_model import BaseModel
@@ -44,5 +48,7 @@ class Review(BaseModel):
     user_id = ""
     text = ""
 >>>>>>> parent of 492c7bb... initial checks
+=======
+>>>>>>> parent of 647751d... initial checks
 =======
 >>>>>>> parent of 647751d... initial checks

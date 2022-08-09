@@ -5,6 +5,20 @@
 '''
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+class TestReviewInstances(unittest.TestCase):
+    """testing for class instances"""
+
+    @classmethod
+    def setUpClass(cls):
+        print('\n\n.................................')
+        print('....... Testing Functions .......')
+        print('........  Review  Class  ........')
+        print('.................................\n\n')
+
+>>>>>>> parent of 647751d... initial checks
     def setUp(self):
         """initializes new review for testing"""
         self.review = Review()
@@ -70,6 +84,7 @@
 
 if __name__ == '__main__':
     unittest.main
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
         """Sets up test methods."""
@@ -146,5 +161,7 @@ class TestReview(unittest.TestCase):
         self.assertIsInstance(user_id, str)
         self.assertIsInstance(text, str)
 >>>>>>> parent of 492c7bb... initial checks
+=======
+>>>>>>> parent of 647751d... initial checks
 =======
 >>>>>>> parent of 647751d... initial checks

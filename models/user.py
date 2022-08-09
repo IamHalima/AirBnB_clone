@@ -2,6 +2,9 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> parent of 647751d... initial checks
 =======
 >>>>>>> parent of 647751d... initial checks
 """
@@ -19,6 +22,7 @@ class User(BaseModel):
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 """ First User in ABNB project """
 from . base_model import BaseModel
@@ -29,6 +33,8 @@ class User(BaseModel):
 >>>>>>> parent of 6bc3c0a... initial checks
 =======
 >>>>>>> parent of 647751d... initial checks
+=======
+>>>>>>> parent of 647751d... initial checks
     email = ''
     password = ''
     first_name = ''
@@ -37,6 +43,7 @@ class User(BaseModel):
     def __init__(self, *args, **kwargs):
         """instantiates a new user"""
         super().__init__(self, *args, **kwargs)
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 >>>>>>> parent of 6bc3c0a... initial checks
@@ -53,5 +60,7 @@ class User(BaseModel):
     first_name = ""
     last_name = ""
 >>>>>>> parent of 492c7bb... initial checks
+=======
+>>>>>>> parent of 647751d... initial checks
 =======
 >>>>>>> parent of 647751d... initial checks

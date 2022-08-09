@@ -18,6 +18,9 @@ class TestUser(unittest.TestCase):
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> parent of 647751d... initial checks
 =======
 >>>>>>> parent of 647751d... initial checks
         """initializes new place for testing"""
@@ -84,6 +87,7 @@ class TestUser(unittest.TestCase):
 
 if __name__ == '__main__':
     unittest.main
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
         """Sets up test methods."""
@@ -227,5 +231,7 @@ if __name__ == "__main__":
         city_id = getattr(self.new_place, "city_id")
         self.assertIsInstance(city_id, str)
 >>>>>>> parent of 492c7bb... initial checks
+=======
+>>>>>>> parent of 647751d... initial checks
 =======
 >>>>>>> parent of 647751d... initial checks

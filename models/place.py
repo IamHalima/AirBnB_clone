@@ -2,6 +2,9 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> parent of 647751d... initial checks
 =======
 >>>>>>> parent of 647751d... initial checks
 """
@@ -33,6 +36,7 @@ class Place(BaseModel):
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 """ Places where host the user's """
 from . base_model import BaseModel
@@ -41,6 +45,8 @@ from . base_model import BaseModel
 class Place(BaseModel):
     """ Places where we offer our services """
 >>>>>>> parent of 6bc3c0a... initial checks
+=======
+>>>>>>> parent of 647751d... initial checks
 =======
 >>>>>>> parent of 647751d... initial checks
     city_id = ''
