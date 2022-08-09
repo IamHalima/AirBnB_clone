@@ -1,53 +1,43 @@
 #!/usr/bin/python3
-"""Unittest module for the City Class."""
+
+'''
+    All the test for the user model are implemented here.
+'''
 
 import unittest
-from datetime import datetime
-import time
-from models.city import City
-import re
-import json
-from models.engine.file_storage import FileStorage
-import os
-from models import storage
 from models.base_model import BaseModel
+from models.city import City
 
 
-class TestCity(unittest.TestCase):
+class TestUser(unittest.TestCase):
+    '''
+        Testing User class
+    '''
 
-    """Test Cases for the City class."""
+    def test_City_inheritance(self):
+        '''
+            tests that the City class Inherits from BaseModel
+        '''
+        new_city = City()
+        self.assertIsInstance(new_city, BaseModel)
 
-    def setUp(self):
-        """Sets up test methods."""
-        pass
+    def test_User_attributes(self):
+        new_city = City()
+        self.assertTrue("state_id" in new_city.__dir__())
+        self.assertTrue("name" in new_city.__dir__())
 
-    def tearDown(self):
-        """Tears down test methods."""
-        self.resetStorage()
-        pass
+    def test_type_name(self):
+        '''
+            Test the type of name
+        '''
+        new_city = City()
+        name = getattr(new_city, "name")
+        self.assertIsInstance(name, str)
 
-    def resetStorage(self):
-        """Resets FileStorage data."""
-        FileStorage._FileStorage__objects = {}
-        if os.path.isfile(FileStorage._FileStorage__file_path):
-            os.remove(FileStorage._FileStorage__file_path)
-
-    def test_8_instantiation(self):
-        """Tests instantiation of City class."""
-
-        b = City()
-        self.assertEqual(str(type(b)), "<class 'models.city.City'>")
-        self.assertIsInstance(b, City)
-        self.assertTrue(issubclass(type(b), BaseModel))
-
-    def test_8_attributes(self):
-        """Tests the attributes of City class."""
-        attributes = storage.attributes()["City"]
-        o = City()
-        for k, v in attributes.items():
-            self.assertTrue(hasattr(o, k))
-            self.assertEqual(type(getattr(o, k, None)), v)
-
-
-if __name__ == "__main__":
-    unittest.main()
+    def test_type_name(self):
+        '''
+            Test the type of name
+        '''
+        new_city = City()
+        name = getattr(new_city, "state_id")
+        self.assertIsInstance(name, str)
